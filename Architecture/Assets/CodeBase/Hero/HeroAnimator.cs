@@ -8,12 +8,12 @@ namespace CodeBase.Hero
     {
         private const string Speed = "Speed";
         
-        public CharacterController CharacterController;
-        public Animator Animator;
+        [SerializeField] private CharacterController _characterController;
+        [SerializeField] private Animator _animator;
 
         private void Update()
         {
-            Animator.SetFloat(Speed, CharacterController.velocity.magnitude, 0.1f, Time.deltaTime);
+            _animator.SetFloat(Speed, _characterController.velocity.magnitude, 0.1f, Time.deltaTime);
         }
     }
 }

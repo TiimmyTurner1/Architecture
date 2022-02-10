@@ -269,6 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
+  - component: {fileID: 963194229}
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
@@ -342,6 +343,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77cb77d7985e410f9013401554e8b81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _following: {fileID: 1772630363}
+  _rotationAngleX: 42
+  _distance: 9.5
+  _offsetY: 0.7
 --- !u!1 &1065081437
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +435,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1765727911 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2404423743299803351, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+  m_PrefabInstance: {fileID: 2404423742913021552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1769105542 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 2404423743295909622, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+  m_PrefabInstance: {fileID: 2404423742913021552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1772630363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2404423743292094251, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+  m_PrefabInstance: {fileID: 2404423742913021552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &25146904873591927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,5 +602,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barbarian
       objectReference: {fileID: 0}
+    - target: {fileID: 2404423743295909621, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+      propertyPath: _movementSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404423743295909621, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+      propertyPath: _characterController
+      value: 
+      objectReference: {fileID: 1769105542}
+    - target: {fileID: 2404423743295909625, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1765727911}
+    - target: {fileID: 2404423743295909625, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}
+      propertyPath: _characterController
+      value: 
+      objectReference: {fileID: 1769105542}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f33d6c3ca21e0446844f35baee52ea4, type: 3}

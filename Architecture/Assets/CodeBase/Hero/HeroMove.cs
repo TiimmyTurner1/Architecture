@@ -1,4 +1,5 @@
 ﻿using System;
+using CodeBase.CameraLogic;
 using CodeBase.Infrastructure;
 using CodeBase.Services.Input;
 using UnityEngine;
@@ -7,8 +8,8 @@ namespace CodeBase.Hero
 {
     public class HeroMove : MonoBehaviour
     {
-        public CharacterController CharacterController;
-        public float MovementSpeed;
+        [SerializeField] private CharacterController _characterController;
+        [SerializeField] private float _movementSpeed;
 
         private IInputService _inputService;
         private Camera _camera;
@@ -21,6 +22,8 @@ namespace CodeBase.Hero
         private void Start()
         {
             _camera = Camera.main;
+            
+            CameraFollow();
         }
 
         private void Update()
@@ -38,7 +41,10 @@ namespace CodeBase.Hero
 
             movementVector += Physics.gravity;
             
-            CharacterController.Move(movementVector * MovementSpeed * Time.deltaTime);
+            _characterController.Move(movementVector * _movementSpeed * Time.deltaTime);
         }
+        
+        private void CameraFollow()=>
+            _camera.GetComponent<CameraFollow>().Follow(gameObject.transform);
     }
 }
