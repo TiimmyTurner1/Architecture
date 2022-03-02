@@ -23,8 +23,8 @@ namespace CodeBase.CameraLogic
             transform.position = position;
         }
 
-        public void Follow(Transform following) =>
-            _following = following;
+        public void Follow(GameObject following) =>
+            _following = following.transform;
 
         private Vector3 FollowingPointPosition()
         {
